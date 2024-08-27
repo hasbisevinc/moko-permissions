@@ -9,7 +9,7 @@ androidLifecycleVersion = "2.2.0"
 androidCoreTestingVersion = "2.2.0"
 coroutinesVersion = "1.6.4"
 mokoMvvmVersion = "0.16.0"
-mokoPermissionsVersion = "0.18.0"
+mokoPermissionsVersion = "0.18.0-slow"
 composeJetBrainsVersion = "1.5.1"
 lifecycleRuntime = "2.6.1"
 composeUiVersion = "1.0.1"
@@ -31,7 +31,7 @@ androidCoreTesting = { module = "androidx.arch.core:core-testing", version.ref =
 
 
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinVersion" }
-androidGradlePlugin = { module = "com.android.tools.build:gradle", version = "7.4.2" }
+androidGradlePlugin = { module = "com.android.tools.build:gradle", version = "8.3.0" }
 mokoGradlePlugin = { module = "dev.icerock.moko:moko-gradle-plugin", version = "0.2.0" }
 mobileMultiplatformGradlePlugin = { module = "dev.icerock:mobile-multiplatform", version = "0.14.2" }
 kotlinSerializationGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlinVersion" }
