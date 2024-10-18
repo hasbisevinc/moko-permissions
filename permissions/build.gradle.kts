@@ -4,17 +4,14 @@
 
 plugins {
     id("dev.icerock.moko.gradle.multiplatform.mobile")
-    id("dev.icerock.moko.gradle.publication")
-    id("dev.icerock.moko.gradle.stub.javadoc")
-    id("dev.icerock.moko.gradle.detekt")
 }
 
 android {
     namespace = "dev.icerock.moko.permissions"
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 }
 
@@ -22,7 +19,7 @@ kotlin {
     androidTarget {
         compilations.all {
             kotlinOptions {
-                jvmTarget = "1.8"
+                jvmTarget = "11"
             }
         }
     }

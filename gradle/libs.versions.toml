@@ -31,7 +31,7 @@ androidCoreTesting = { module = "androidx.arch.core:core-testing", version.ref =
 
 
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinVersion" }
-androidGradlePlugin = { module = "com.android.tools.build:gradle", version = "8.3.0" }
+androidGradlePlugin = { module = "com.android.tools.build:gradle", version = "8.2.2" }
 mokoGradlePlugin = { module = "dev.icerock.moko:moko-gradle-plugin", version = "0.2.0" }
 mobileMultiplatformGradlePlugin = { module = "dev.icerock:mobile-multiplatform", version = "0.14.2" }
 kotlinSerializationGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlinVersion" }

@@ -20,7 +20,6 @@ buildscript {
     }
 }
 
-apply(plugin = "dev.icerock.moko.gradle.publication.nexus")
 val mokoVersion = libs.versions.mokoPermissionsVersion.get()
 allprojects {
     group = "dev.icerock.moko"
