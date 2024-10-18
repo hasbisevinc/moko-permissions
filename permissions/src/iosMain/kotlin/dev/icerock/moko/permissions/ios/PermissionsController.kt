@@ -4,7 +4,6 @@
 
 package dev.icerock.moko.permissions.ios
 
-import dev.icerock.moko.permissions.LocationManagerDelegate
 import dev.icerock.moko.permissions.Permission
 import dev.icerock.moko.permissions.PermissionState
 import platform.AVFoundation.AVMediaTypeAudio
@@ -14,7 +13,6 @@ import platform.UIKit.UIApplication
 import platform.UIKit.UIApplicationOpenSettingsURLString
 
 class PermissionsController : PermissionsControllerProtocol {
-    private val locationManagerDelegate = LocationManagerDelegate()
 
     override suspend fun providePermission(permission: Permission) {
         return getDelegate(permission).providePermission()
@@ -39,8 +37,6 @@ class PermissionsController : PermissionsControllerProtocol {
             Permission.CAMERA -> AVCapturePermissionDelegate(AVMediaTypeVideo, permission)
             Permission.GALLERY -> GalleryPermissionDelegate()
             Permission.STORAGE, Permission.WRITE_STORAGE -> AlwaysGrantedPermissionDelegate()
-            Permission.LOCATION, Permission.COARSE_LOCATION, Permission.BACKGROUND_LOCATION ->
-                LocationPermissionDelegate(locationManagerDelegate, permission)
 
             Permission.RECORD_AUDIO -> AVCapturePermissionDelegate(AVMediaTypeAudio, permission)
             else -> throw UnsupportedOperationException(
